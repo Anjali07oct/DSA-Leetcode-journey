@@ -1,1 +1,9 @@
-
+class Solution:
+  def moveZeroes(self, nums: list[int]) -> None:
+    nonzero, i = 0, 0   # initialization pointer
+    n = len(nums)   # initialization len of numbers
+    while i < n:
+      if nums[i] != 0:
+        nums[i], nums[nonzero] = nums[nonzero], nums[i]    # swapping of zeroes with nonzeroes numbers
+        nonezero += 1   # move 'nonezero' pointer
+      i += 1  # move 'i' pointer
